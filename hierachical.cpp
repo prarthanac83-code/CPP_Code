@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 class A{
+    protected:
     int x,y;
     public:A(){
         cout<<"enter the value of x and y:"<<endl;
@@ -8,13 +9,11 @@ class A{
     }
 };
 class B:public A{
-    int x,y;
     public:B(){
         cout<<"Product="<<x*y<<endl;
     }
 };
 class C:public A{
-    int x,y;
     public:C(){
         cout<<"sum="<<x+y<<endl;
     }
