@@ -5,8 +5,8 @@ int main(){
     cout<<"enter the number:"<<endl;
     cin>>a;
     if(a&1){
-        cout<<"the number is odd";
-    }else{
         cout<<"the number is even";
+    }else{
+        cout<<"the number is odd";
     }
 }
