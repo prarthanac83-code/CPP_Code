@@ -4,7 +4,7 @@ class rect{
     private:
     int length,breadth;
     public:
-    void dimensional(int l,int b) 
+    void dimensional(int l,int b)  
     {
         length=l;
         breadth=b;
