@@ -1,3 +1,4 @@
+//virtual overriding
 #include<iostream>
 using namespace std;
 class shape{
