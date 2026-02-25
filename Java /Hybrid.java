@@ -1,3 +1,4 @@
+//Hybrid inheritance
 interface character{
     void attack();
 }
@@ -23,7 +24,7 @@ class Mage implements character , weapon{
     }
 }
 
-public class Multiple {
+public class Hybrid {
     public static void main(String args[]){
         Warrior w = new Warrior();
         Mage m = new Mage();
