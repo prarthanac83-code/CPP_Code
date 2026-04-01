@@ -13,7 +13,7 @@ class BMW extends car{
         System.out.println("Top speed is 240kmph");
     }
 }
-class Farari extends car{
+class Ferrari extends car{
     public void topspeed(){
         System.out.println("Top speed is 280kmph");
     }
@@ -25,7 +25,7 @@ public class Abstract {
         c1.stop();
         c1.topspeed();
 
-        car c2 = new Farari();
+        car c2 = new Ferrari();
         c2.start();
         c2.stop();
         c2.topspeed();
