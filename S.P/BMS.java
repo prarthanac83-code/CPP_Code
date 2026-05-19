@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 class BankAccount{
-    Private int  accountName;
-    Private string  accountHolder;
-    Private double  balance;      
+    private String accountName;
+    private int accountNumber;
+    private double  balance;      
 //constructor
-public BankAccount( int accountHolder, string accountName, double balance){
-    this.accountHolder = accountHolder;
+public BankAccount( int accountNumber, String accountName, double balance){
+    this.accountNumber = accountNumber;
     this.accountName = accountName;
     this.balance = balance;
 }
@@ -18,21 +18,21 @@ public void deposit(double amount){
 }
 //withdrawal method
 public void withdrawal(double amount){
-    if amount <= balance{
-        balance-=amount
+    if(amount <= balance){
+        balance-=amount;
         System.out.println("withdrawal Successful!");
     }else{
         System.out.println("Insufficient Balance!");
     }
 }
 //Display Account details
-public void DisplayAccount{
+public void displayAccount(){
     System.out.println("\n AccountNumber:"+accountNumber);
     System.out.println("\n AccountName:"+accountName);
     System.out.println("\n AccountBalance:"+balance);
 }
-public int getaccountHolder(){
-    return accountHolder;
+public int getaccountNumber(){
+    return accountNumber;
 }
 }
 public class BMS {
@@ -46,7 +46,7 @@ public class BMS {
             System.out.println("\n===== BANK MANAGEMENT SYSTEM =====");
             System.out.println("1. Create Account");
             System.out.println("2. Deposit Money");
-            System.out.println("3. Withdraw Money");
+            System.out.println("3. Withdrawl Money");
             System.out.println("4. View Account");
             System.out.println("5. Exit");
             System.out.print("Enter Your Choice: ");
@@ -92,13 +92,13 @@ public class BMS {
                     System.out.print("Enter Account Number: ");
                     int withAcc = sc.nextInt();
 
-                    BankAccount withdrawAccount = findAccount(accounts, withAcc);
+                    BankAccount withdrawalAccount = findAccount(accounts, withAcc);
 
-                    if (withdrawAccount != null) {
+                    if (withdrawalAccount != null) {
                         System.out.print("Enter Withdrawal Amount: ");
                         double amount = sc.nextDouble();
 
-                        withdrawAccount.withdraw(amount);
+                        withdrawalAccount.withdrawal(amount);
                     } else {
                         System.out.println("Account Not Found!");
                     }
@@ -134,7 +134,7 @@ public class BMS {
     public static BankAccount findAccount(ArrayList<BankAccount> accounts, int accNo) {
 
         for (BankAccount acc : accounts) {
-            if (acc.getAccountNumber() == accNo) {
+            if (acc.getaccountNumber() == accNo) {
                 return acc;
             }
         }
